@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Age calculator</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<setion class="section">
+		<div class="container">
+			<div class="wrapper">
+				<div class="age_calculator-section">
+						<div class="age_calculator-texts">
+							<h1 class="title">
+								Age Calculator
+							</h1>
+						</div>
+					<div class="age_calculator">
+						<div class="birth-date-input">
+							<!-- BIRTHDATE -->
+							<label for="birthdate">Enter Your Birth Date:</label>
+							<input type="date" name="birthdate" id="birthdate">
+						</div>
+
+						<div class="dates-input">
+							<ul class="dates-input-ul">
+								<li  class="dates-input-li"><span id="years"></span> - Years</li>
+								<li  class="dates-input-li"><span id="months"></span> - Months</li>
+								<li  class="dates-input-li"><span id="days"></span> - Days</li>
+								<li  class="dates-input-li"><span id="hours"></span> - Hours</li>
+								<li  class="dates-input-li"><span id="minutes"></span> - Minutes</li>
+								<li  class="dates-input-li"><span id="seconds"></span> - Seconds</li>
+							</ul>
+						</div>
+
+						<div class="btns-input">
+							<button class="btn" onclick="calculate()" aria-label="Calculate Age">Calculate</button>
+							<button  class="btn" onclick="reset()" aria-label="Reset Form">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</setion>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
