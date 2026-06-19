@@ -1,0 +1,29 @@
+.category-cards {
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+	overflow-x: auto;
+	padding-bottom: 10px;
+	max-width: 1080px;
+	margin: 0 auto;
+
+	@include mobile {
+		margin: 0 auto;
+	}
+
+	.category-card {
+		flex-shrink: 0;
+	}
+
+	@include tab {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding-inline: 20px;
+		gap: 20px;
+	}
+
+	@include mobile {
+		gap: 16px;
+		padding-inline: 20px;
+	}
+}

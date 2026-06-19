@@ -1,0 +1,282 @@
+.shop-card {
+	position: relative;
+	border-radius: $radius * 8;
+	position: relative;
+	.shop-image {
+		width: 100%;
+		height: 100%;
+		max-height: 500px;
+		overflow: hidden;
+		border-radius: $radius * 8;
+		.image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 300ms ease-in-out;
+		}
+	}
+	.shop-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+		background: rgba($white-color, .2);
+		backdrop-filter: blur(6px);
+		border-radius: $radius * 8;
+		box-shadow: -1.5px -1.5px 0 $white-color;
+	}
+	&:hover {
+		.shop-card-overlay {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.shop-card-overlay {
+		// opacity: 0;
+		// visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 2rem;
+		background: url('/assets/img/bunny-transparent-bg.svg') no-repeat top/cover;
+		width: 100%;
+		height: 100%;
+		min-height: 400px;
+		position: absolute;
+		border-radius: $radius * 5;
+		top: 1rem;
+		right: 1rem;
+		transition: all 200ms linear;
+		.shop-card-top {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			justify-content: center;
+			align-items: center;
+			.logo-img {
+				width: 130px;
+			}
+		}
+		.shop-card-center {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			align-items: center;
+			.overlay-text {
+				display: flex;
+				gap: 12px;
+				font-size: 16px;
+				color: $white-color;
+				.map-icon {
+					width: 1rem;
+					height: 1rem;
+					margin-top: 4px;
+				}
+			}
+			.overlay-link {
+				font-size: 16px;
+				color: $white-color;
+				font-weight: 600;
+			}
+		}
+		.shop-card-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-texts {
+				color: $white-color;
+				.shop-card-bottom-text {
+					font-size: 14px;
+				}
+			}
+			&-price {
+				font-size: 18px;
+				font-weight: 600;
+				font-family: "Fredoka";
+				margin-top: 12px;
+			}
+		}
+	}
+}
+
+// .shop-card {
+// 	position: relative;
+// 	border-radius: $radius * 8;
+// 	overflow: hidden;
+
+// 	.shop-image {
+// 		width: 100%;
+// 		height: 100%;
+// 		max-height: 500px;
+// 		overflow: hidden;
+// 		border-radius: $radius * 8;
+
+// 		.image {
+// 			width: 100%;
+// 			height: 100%;
+// 			object-fit: cover;
+// 			transition: all 400ms ease;
+// 		}
+// 	}
+
+// 	.shop-overlay {
+// 		position: absolute;
+// 		bottom: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		padding: 20px;
+// 		text-align: center;
+// 		background: rgba($white-color, .2);
+// 		backdrop-filter: blur(6px);
+// 		border-radius: $radius * 8;
+// 		box-shadow: -1.5px -1.5px 0 $white-color;
+// 		transition: all 300ms ease;
+// 	}
+
+// 	&:hover {
+// 		.shop-overlay {
+// 			opacity: 0;
+// 			transform: translateY(20px);
+// 		}
+// 		.shop-card-overlay {
+// 			opacity: 1;
+// 			visibility: visible;
+// 			transform: translate(0, 0);
+// 		}
+// 	}
+
+// 	.shop-card-overlay {
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		transform: translate(20px, 20px);
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-between;
+// 		padding: 2rem;
+
+// 		background: rgba(120, 110, 170, 0.85);
+// 		backdrop-filter: blur(12px);
+
+// 		width: calc(100% - 2rem);
+// 		height: calc(100% - 2rem);
+
+// 		position: absolute;
+// 		top: 1rem;
+// 		right: 1rem;
+
+// 		border-radius: $radius * 6;
+// 		transition: all 300ms ease;
+
+// 		.shop-card-top {
+// 			display: flex;
+// 			flex-direction: column;
+// 			gap: 2rem;
+// 			align-items: center;
+
+// 			.logo-img {
+// 				width: 120px;
+// 			}
+// 		}
+
+// 		.shop-card-center {
+// 			display: flex;
+// 			flex-direction: column;
+// 			gap: 20px;
+// 			align-items: center;
+// 			text-align: center;
+
+// 			.overlay-text {
+// 				display: flex;
+// 				gap: 10px;
+// 				font-size: 14px;
+// 				color: $white-color;
+// 				line-height: 1.4;
+
+// 				.map-icon {
+// 					width: 14px;
+// 					height: 14px;
+// 					margin-top: 3px;
+// 				}
+// 			}
+
+// 			.overlay-link {
+// 				font-size: 14px;
+// 				color: $white-color;
+// 				font-weight: 600;
+// 			}
+// 		}
+
+// 		.shop-card-bottom {
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: space-between;
+
+// 			&-texts {
+// 				color: $white-color;
+
+// 				.shop-card-bottom-text {
+// 					font-size: 13px;
+// 					opacity: .8;
+// 				}
+// 			}
+
+// 			&-price {
+// 				font-size: 18px;
+// 				font-weight: 600;
+// 				font-family: "Fredoka";
+// 				margin-top: 8px;
+// 			}
+
+// 			&-action {
+// 				.button {
+// 					transform: translate(0, 0);
+// 					transition: all 250ms ease;
+// 				}
+
+// 				&:hover {
+// 					.button {
+// 						transform: translate(6px, -6px);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+
+.shop-card-top {
+	background-color: red;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			justify-content: center;
+			align-items: center;
+			.logo-img {
+				width: 130px;
+			}
+		}
+		.shop-card-center {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			align-items: center;
+			.overlay-text {
+				display: flex;
+				gap: 12px;
+				font-size: 16px;
+				color: $white-color;
+				.map-icon {
+					width: 1rem;
+					height: 1rem;
+					margin-top: 4px;
+				}
+			}
+			.overlay-link {
+				font-size: 16px;
+				color: $white-color;
+				font-weight: 600;
+			}
+		}

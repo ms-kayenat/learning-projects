@@ -1,0 +1,20 @@
+.products {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	.product-cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		@include desktop {
+			gap: 1.15rem;
+		}
+		@include tab {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+		@include mobile {
+			gap: .5rem;
+		}
+	}
+}

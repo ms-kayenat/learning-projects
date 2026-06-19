@@ -1,0 +1,44 @@
+.best-sellers {
+  .section-texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .best-sellers-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @include tab-md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @include mobile-md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-card {
+      max-height: 620px;
+      padding: 0;
+      .product-btn {
+      	margin-top: 0;
+      }
+      @include tab-md {
+        .product-card {
+          max-height: 600px;
+        }
+      }
+    }
+		
+    .flex-tag {
+      display: flex;
+      justify-content: start;
+      gap: 14px;
+    }
+  }
+}

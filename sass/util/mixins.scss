@@ -1,0 +1,90 @@
+@mixin button-reset {
+	height: $button-size;
+	padding-left: $button-hpadding;
+	padding-right: $button-hpadding;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid transparent;
+	font-size: $button-font-size;
+	font-weight: 600;
+	color: $black-003;
+	position: relative;
+	z-index: 2;
+	font-family: "Fredoka", sans-serif;
+}
+
+// Small 	up to 640px 	20" to 65" 	TVs 						320x569, 360x640, 480x854
+// Medium 	641 - 1007px 	7" to 12" 	Tablets 					960x540
+// Large 	1008ps and up 	13" and up 	PCs, Laptops, Surface Hub 	1024x640, 1366x768, 1920x1080
+
+@mixin mobile-sm {
+	@media (max-width: 320px) {
+		@content;
+	}
+}
+@mixin mobile-md {
+	@media (max-width: 360px) {
+		@content;
+	}
+}
+@mixin mobile-lg {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin tab {
+	@media (max-width: 960px) {
+		@content;
+	}
+}
+@mixin tab-md {
+	@media (max-width: 800px) {
+		@content;
+	}
+}
+@mixin tab-sm {
+	@media (max-width: 700px) {
+		@content;
+	}
+}
+@mixin desktop-sm-2 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin desktop-md {
+	@media (max-width: 1400px) {
+		@content;
+	}
+}
+@mixin desktop-sm {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin desktop-lg {
+	@media (max-width: 1920px) {
+		@content;
+	}
+}
+
+@mixin desktop-lg-2 {
+	@media (max-width: 1700px) {
+		@content;
+	}
+}
+
+
+@mixin mobile {
+	@media (max-width: 550px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}

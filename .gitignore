@@ -1,1 +1,8 @@
-assets
+temp/
+assets/css/styles.css
+assets/css/styles.css.map
+
+*.map
+.*
+!.gitignore
+!.gitkeep

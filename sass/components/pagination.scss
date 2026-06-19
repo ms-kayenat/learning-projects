@@ -1,0 +1,57 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	&-button {
+		background: transparent;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		color: $black-004;
+		border-radius: 4px;
+		transition: all 300ms ease-in;
+		&:hover {
+			color: $black-color;
+		}
+		&-icon {
+			width: 24px;
+			display: flex;
+		}
+		&.is-disabled, &[disabled] {
+			color: $black-002;
+		}
+		@include mobile {
+			height: 36px;
+			padding: 4px 8px;
+		}
+	}
+	&-btns {
+		display: flex;
+		gap: 12px;
+		overflow-x: scroll;
+		@include mobile {
+			gap: 8px;
+		}
+	}
+	&-btn {
+		min-width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $primary-001;
+		border-radius: 4px;
+		transition: background 200ms ease-in;
+	  border-radius: 50%;
+		&:hover, &.active {
+			background: url('/assets/img/circle-primary.svg') no-repeat center/cover;
+			background-color: $white-color;
+		}
+		@include mobile {
+			min-width: 40px;
+			height: 40px;
+		}
+	}
+}

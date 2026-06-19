@@ -1,0 +1,179 @@
+.gift-box-section {
+	.section-mask {
+		.section-container {
+			max-width: none;
+			padding: 0;
+
+			.section-wrapper {
+				.gift-box-wrapper {
+					.gift-box-content {
+						background-color: $primary-001;
+						&-wrapper {
+							padding: 0 1rem;
+							max-width: 1800px;
+							margin: 0 auto;
+							.ribbon {
+								display: grid;
+								grid-template-columns: repeat(2, 1fr);
+								columns: 5;
+								border-radius: 3rem;
+								overflow: hidden;
+								&-img {
+									@include desktop-sm-2 {
+										.ribbon-img {
+											right: 0;
+											transform: rotate(-90deg);
+											bottom: -50%;
+										}
+									}
+								}
+								.gift-box-content-right {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									padding: 0 5rem;
+									background: linear-gradient(to bottom, #D8D0BE, #D8D0BE), url('/assets/img/gift-box-bg.png');
+									background-blend-mode: overlay;
+
+									&-wrapper {
+										max-width: 600px;
+
+										.hero-title {
+											margin-bottom: 1rem;
+											@include mobile {
+												font-size: 1.5rem;
+											}
+										}
+										p {
+											color: $black-003;
+											font-weight: 500;
+											max-width: 440px;
+
+											@include desktop-sm-2 {
+												max-width: 600px;
+											}
+											@include mobile {
+												font-size: 0.75rem;
+											}
+										}
+
+										.gift-box-products {
+											margin-top: 5rem;
+											display: flex;
+											overflow: hidden;
+										}
+										.gift-box-product {
+											width: 100%;
+											min-width: 600px;
+											transition: 300ms linear;
+											&-wrapper {
+												display: flex;
+												gap: 1.25rem;
+												.button {
+													width: 100%;
+													margin-top: 2.5rem;
+													font-size: 1.25rem;
+
+													@include mobile {
+														font-size: 0.875rem;
+														weight: 700;
+													}
+												}
+												.gallery-card {
+													max-width: 180px;
+
+													@include mobile {
+														max-width: 140px;
+													}
+												}
+
+												.price-line {
+													margin-top: .25rem;
+												}
+
+												.color-swatches {
+													margin-top: 0.875rem;
+												}
+											}
+										}
+
+										.progressbar {
+											margin-top: 2rem;
+										}
+									}
+
+									@include desktop-sm-2 {
+										padding: 7.5rem 1rem 3rem;
+									}
+								}
+
+								@include desktop-sm-2 {
+									grid-template-columns: repeat(1, 1fr);
+									border-radius: 2.5rem;
+								}
+							}
+						}
+					}
+
+					.gift-box-scrolling-text {
+						display: flex;
+						align-items: flex-end;
+						background-size: auto 100%;
+						background-repeat: repeat-x;
+						background-position: 0 2px; // This is for fixing tiny bottom gap
+						height: 100px;
+						div {
+							font-size: 1rem;
+						}
+						.scrolling-text {
+							border-top: none;
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.price-line {
+	display: inline-flex;
+	gap: .75rem;
+}
+.price-sp, .price-mp {
+	color: $black-color;
+	font-size: 18px;
+	font-weight: 500;
+
+	&.is-primary {
+		color: $primary-001;
+	}
+
+	@include mobile {
+		font-size: 0.75rem;
+	}
+}
+.price-mp {
+	color: $black-003;
+	text-decoration: line-through;
+}
+
+.color-swatches {
+	display: flex;
+	gap: .75rem;
+
+	@include mobile {
+		gap: 0.625rem;
+	}
+}
+
+.color-swatch {
+	width: 3rem;
+	height: 1.25rem;
+	border-radius: 3px;
+
+	@include mobile {
+		width: 2rem;
+		height: 0.75rem;
+	}
+}

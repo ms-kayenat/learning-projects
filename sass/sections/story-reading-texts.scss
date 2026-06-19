@@ -1,0 +1,17 @@
+.story-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: rgba($black-color, .6);
+	font-size: 20px;
+	&-title {
+		color: $black-color;
+	}
+	.divider {
+		margin: 0;
+	}
+	@include tab-sm {
+		font-size: 14px;	
+		gap: 12px;
+	}
+}

@@ -1,0 +1,76 @@
+.checkout-bundle-section {
+	display: flex;	
+	gap: 1rem;
+	@include desktop {
+		flex-direction: column;
+	}
+}
+
+.bundle-cards {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	padding: 0 1rem;
+	height: 100%;
+	max-height: 1050px;
+	overflow-y: scroll;
+	@include desktop {
+		display: flex;
+		overflow-y: inherit;
+		overflow-x: scroll;
+	}
+	@include tab {
+		gap: 1.5rem;
+	}
+	@include mobile {
+		gap: 1.25rem;
+	}
+	@include mobile-lg {
+		gap: .75rem;
+	}
+	.product-card {
+		width: 100%;
+		@include desktop {
+			min-width: 250px;
+		}
+		.product-image {
+			border: 1px solid transparent;
+			border-radius: $radius * 8;
+			transition: all 200ms ease-in-out;
+			padding: 2rem;
+			@include desktop {
+				max-height: 300px !important;
+			}
+			.image {
+				max-height: 300px;
+			}
+		}
+		.product-details {
+			.product-texts {
+				.product-title {
+					font-weight: 400;
+				}
+				.product-price-details {
+					.product-price {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.button {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			z-index: 99;
+		}
+		&:hover {
+			.product-image {
+				border-color: $primary-001;
+			}
+		}
+		@include mobile {
+			padding: 0;
+		}
+	}
+}

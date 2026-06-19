@@ -1,0 +1,26 @@
+.quantity-items {
+  width: 100%;
+	display: flex;
+  justify-content: space-between;
+  .quantity-item {
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-around;
+  	.quantity-text {
+  		font-size: 24px;
+  		color: $black-color;
+  		@include mobile {
+  			font-size: 14px;
+  		}
+  	}
+  	.quantity-price {
+  		font-size: 20px;
+  		color: $primary-001;
+  		font-weight: 600;
+  		line-height: 1.2;
+  		@include mobile {
+  			font-size: 16px;
+  		}
+  	}
+  }
+}

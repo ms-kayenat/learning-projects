@@ -1,0 +1,20 @@
+.section-text-wrapper {
+	padding-bottom: 32px;
+	@include mobile {
+		padding-bottom: 28px;
+	}
+}
+
+.story-header-section {
+	font-family: Fredoka;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.2;
+	padding-bottom: 24px;
+	color:	$primary-001;
+
+	@include mobile {
+		font-size: 16px;
+		padding-bottom: 14px;
+	}
+}

@@ -1,0 +1,15 @@
+.category-small-cards {
+	display: flex;
+	justify-content: center;
+	gap: 32px;
+	width: 100%;
+	max-width: 1024px;
+	overflow-x: scroll;
+	margin: 0 auto;
+	@include desktop-sm {
+		justify-content: start;
+	}
+	@include tab {
+		gap: 16px;
+	}
+}

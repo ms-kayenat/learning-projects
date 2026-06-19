@@ -1,0 +1,119 @@
+.pure-card {
+	position: relative;
+	padding-top: 80px;
+	@include tab-sm {
+		padding-top: 32px;
+	}
+	&-wrapper {
+		width: 100%;
+		border: 1px solid $primary-001;
+		border-radius: $radius * 10;
+		overflow: hidden;
+		background-color: $white-color;
+		@include tab-sm {
+			border-radius: 20px;
+		}
+		&:hover {
+			.image {
+				transform: scale(1.12);
+			}
+		}
+	}
+
+	&-img {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		.image {
+			width: 100%;
+			display: block;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+	}
+	.rating {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		background: #FFF8E9;
+		padding: 6px 10px;
+		border-radius: 30px;
+		display: flex;
+		align-items: center;
+
+		&-icon {
+			height: 24px;
+			width: 24px;
+			margin-right: 12px;
+		}
+		&-text {
+			color: $primary-001;
+		}
+
+	}
+
+	&-texts {
+		padding: 32px;
+
+		@include tab {
+			padding: 24px;
+		}
+
+		@include tab-md {
+			padding: 20px;
+		}
+
+		@include mobile {
+			padding: 14px;
+		}
+	}
+	&-title {
+		font-family: Anton;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 1.2;
+		margin-top: 20px;
+
+		@include mobile {
+			font-size: 16px;
+			margin-top: 14px;
+		}
+	}
+	&-subtitle {
+		font-family: Fredoka;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2;
+		color: rgba($black-color, 0.4);
+		margin-top: 20px;
+		@include mobile {
+			font-family: Helvetica Neue;
+			font-weight: 400;
+			font-size: 12px;
+			color: rgba($black-color, 0.6);
+			margin-top: 10px;
+		}
+	}
+	.pure-tag {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+}
+.bunny-tag {
+	position: absolute;
+	top: 52px;
+	left: 16px;
+	transform: translateY(-50%);
+	display: none;
+	z-index: 2;
+	@include tab-sm {
+		left: 70%;
+	}
+}
+.pure-card.has-bunny-tag,
+.pure-card:hover {
+	.bunny-tag {
+		display: block;
+	}
+}

@@ -1,0 +1,31 @@
+.kawai-meals-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include tab {
+        gap: 30px;
+        .modal-wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            .modal-content {
+                max-height: 450px;
+                @include tab-sm {
+                    max-height: 250px;
+                }
+            }
+        }
+    }
+    @include tab-sm {
+        .content-item {
+            padding: 28px 10px;
+            width: 50%;
+        }
+    }
+    @include tab-sm { 
+        .modal-title {
+            font-size: 24px;
+        }
+        .modal-subtitle {
+            font-size: 12px;
+        }
+    }
+}
