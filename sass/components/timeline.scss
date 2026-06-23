@@ -10,7 +10,6 @@
     background-color: #171424;
     border-radius: 20px;
     overflow: hidden;
-
     @include tab-md {
       flex-direction: column;
     }
@@ -51,6 +50,16 @@
     font-size: 18px;
     line-height: 1.8;
   }
+  &-dot-icon,
+  &-branch-icon {
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      background-color: #171424;
+    }
   &-events {
     width: 100%;
     max-width: 42%;
@@ -65,25 +74,16 @@
       border-left: 2px dashed #5a4f74;
     }
     @include tab-md {
-    width: 100%;
-    padding: 16px 16px 31px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      bottom: 24px;
-      left: 27px;
-      border-left: 2px dashed #5a4f74;
-    }
-  }
-    svg {
       width: 100%;
-      max-width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 2;
-      background-color: #171424;
+      padding: 16px 16px 31px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        bottom: 24px;
+        left: 27px;
+        border-left: 2px dashed #5a4f74;
+      }
     }
   }
   &-event {
@@ -92,23 +92,28 @@
     gap: 16px;
     position: relative;
     margin-bottom: 56px;
-    color: #ad11ad;
+    .timeline-dot-icon {
+      display: block;
+      color: #ad11ad;
+    }
+    .timeline-branch-icon {
+      display: none;
+      color: #2db32d;
+    }
+    &.has-opted {
+      .timeline-dot-icon {
+        display: none;
+      }
+      .timeline-branch-icon {
+        display: block;
+      }
+    }
     @include tab-md {
       gap: 12px;
     }
     &:last-child {
       margin-bottom: 0;
     }
-  }
-  &-branch {
-    width: 100%;
-    max-width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2db32d;
-    flex-shrink: 0;
   }
   &-badge {
     padding: 10px 18px;
