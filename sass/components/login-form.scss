@@ -1,0 +1,111 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 593px;
+    margin: 0 auto;
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: #1a1919;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    @include tab {
+      flex-direction: column;
+      height: auto;
+      max-width: 480px;
+    }
+    .card-image {
+      width: 47%;
+      img {
+        width: 100%;
+        max-width: 484px;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      @include tab {
+        width: 100%;
+      }
+    }
+    .card-content {
+      width: 53%;
+      padding: 60px 48px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include tab {
+        width: 100%;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .form-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #888888;
+          }
+          .form-input {
+            border-radius: 16px;
+            width: 100%;
+            max-width: 388px;
+            height: 63px;
+            background-color: #222222;
+            border: 1px solid #2d2d2d;
+            padding: 0 20px;
+            color: #555555;
+            &::placeholder {
+              color: #555555;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .submit-btn {
+          background: linear-gradient(#ff5353, #ff001c);
+          width: 100%;
+          max-width: 388px;
+          height: 63px;
+          border-radius: 16px;
+          color: #ffffff;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 0, 28, 0.25);
+          }
+        }
+      }
+      &.white {
+        background-color: #ffffff;
+        border-left: 1px solid #ececec;
+        .contact-form {
+          .form-group {
+            .form-label {
+              color: #333333;
+            }
+            .form-input {
+              background-color: #f5f5f5;
+              color: #333333;
+              border-color: #e5e5e5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
