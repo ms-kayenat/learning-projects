@@ -1,73 +1,117 @@
-body {
+.login-form {
+  height: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  .card {
+  .login-card {
     display: flex;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
-    height: 593px;
+    height: 100%;
+    max-height: 593px;
     margin: 0 auto;
     border-radius: 32px;
     overflow: hidden;
     background-color: #1a1919;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @include tab {
+      max-width: 700px;
+    }
+    @include tab-md {
       flex-direction: column;
+      width: 100%;
+      max-width: 345px;
       height: auto;
-      max-width: 480px;
+      max-height: none;
     }
     .card-image {
-      width: 47%;
+      width: 100%;
+      max-width: 47%;
+      @include tab-md {
+        width: 100%;
+        max-width: 100%;
+      }
       img {
         width: 100%;
         max-width: 484px;
         height: 100%;
         object-fit: cover;
         display: block;
-      }
-      @include tab {
-        width: 100%;
+        @include tab-md {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          max-height: 250px; 
+          object-fit: cover;
+          // display: none;
+          // overflow: hidden;
+        }
       }
     }
     .card-content {
-      width: 53%;
-      padding: 60px 48px;
+      width: 100%;
+      max-width: 53%;
+      // padding: 60px 48px;
+      padding: 60px 48px 60px 70px;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      @include tab {
+      @include tab-md {
         width: 100%;
+        max-width: 100%;
+        padding: 16px 20px;
       }
       .contact-form {
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        gap: 7px;
         width: 100%;
-        .form-group {
+        @include tab {
+          gap: 8px;
+        }
+        .form-grid {
           display: flex;
           flex-direction: column;
-          gap: 12px;
-          .form-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #888888;
+          gap: 0px;
+          @include tab-md {
+            gap: 0px;
           }
-          .form-input {
-            border-radius: 16px;
-            width: 100%;
-            max-width: 388px;
-            height: 63px;
-            background-color: #222222;
-            border: 1px solid #2d2d2d;
-            padding: 0 20px;
-            color: #555555;
-            &::placeholder {
-              color: #555555;
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            @include tab-md {
+              gap:3px;
             }
-            &:focus {
-              outline: none;
+            .form-label {
+              font-size: 16px;
+              font-weight: 600;
+              color: #888888;
+              @include tab-md {
+                font-size: 14px;
+              }
+            }
+            .form-input {
+              border-radius: 16px;
+              width: 100%;
+              max-width: 388px;
+              height: 63px;
+              background-color: #222222;
+              border: 1px solid #2d2d2d;
+              padding: 0 20px;
+              &::placeholder {
+                color: #555555;
+              }
+              &:focus {
+                outline: none;
+                border-color: #333333;
+                box-shadow: none;
+              }
+              @include tab-md {
+                height: 46px;
+                max-width: 300px;
+              }
             }
           }
         }
@@ -85,20 +129,29 @@ body {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(255, 0, 28, 0.25);
           }
+          @include tab-md {
+            max-width: 300px;
+            height: 46px;
+          }
         }
       }
       &.white {
         background-color: #ffffff;
         border-left: 1px solid #ececec;
         .contact-form {
-          .form-group {
-            .form-label {
-              color: #333333;
-            }
-            .form-input {
-              background-color: #f5f5f5;
-              color: #333333;
-              border-color: #e5e5e5;
+          .form-grid {
+            .form-group {
+              .form-label {
+                color: #333333;
+              }
+              .form-input {
+                background-color: #f5f5f5;
+                color: #333333;
+                border-color: #e5e5e5;
+                &::placeholder {
+                  color: #acacac;
+                }
+              }
             }
           }
         }
@@ -106,6 +159,3 @@ body {
     }
   }
 }
-
-
-
