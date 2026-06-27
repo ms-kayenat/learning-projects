@@ -25,7 +25,7 @@
       height: auto;
       max-height: none;
     }
-    .card-image {
+    .login-card-image {
       width: 100%;
       max-width: 47%;
       @include tab-md {
@@ -42,14 +42,17 @@
           width: 100%;
           max-width: 100%;
           height: 100%;
-          max-height: 250px; 
+          max-height: 250px;
           object-fit: cover;
+          // display: none;
+          // overflow: hidden;
         }
       }
     }
-    .card-content {
+    .login-card-content {
       width: 100%;
       max-width: 53%;
+      // padding: 60px 48px;
       padding: 60px 48px 60px 70px;
       display: flex;
       justify-content: center;
@@ -59,29 +62,30 @@
         max-width: 100%;
         padding: 16px 20px;
       }
-      .contact-form {
+      .login-contact-form {
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 32px;
         width: 100%;
         @include tab {
-          gap: 8px;
+          gap: 20px;
         }
-        .form-grid {
+        
+        .login-form-grid {
           display: flex;
           flex-direction: column;
           gap: 0px;
           @include tab-md {
             gap: 0px;
           }
-          .form-group {
+          .login-form-group {
             display: flex;
             flex-direction: column;
             gap: 12px;
             @include tab-md {
-              gap:3px;
+              gap: 3px;
             }
-            .form-label {
+            .login-form-label {
               font-size: 16px;
               font-weight: 600;
               color: #888888;
@@ -89,7 +93,7 @@
                 font-size: 14px;
               }
             }
-            .form-input {
+            .login-form-input {
               border-radius: 16px;
               width: 100%;
               max-width: 388px;
@@ -112,7 +116,7 @@
             }
           }
         }
-        .submit-btn {
+        .login-submit-btn {
           background: linear-gradient(#ff5353, #ff001c);
           width: 100%;
           max-width: 388px;
@@ -132,22 +136,24 @@
           }
         }
       }
-      &.white {
-        background-color: #ffffff;
-        border-left: 1px solid #ececec;
-        .contact-form {
-          .form-grid {
-            .form-group {
-              .form-label {
-                color: #333333;
-              }
-              .form-input {
-                background-color: #f5f5f5;
-                color: #333333;
-                border-color: #e5e5e5;
-                &::placeholder {
-                  color: #acacac;
-                }
+    }
+  }
+  &.is-white {
+    .login-card {
+      background-color: #ffffff;
+      border-left: 1px solid #ececec;
+      .login-contact-form {
+        .login-form-grid {
+          .login-form-group {
+            .login-form-label {
+              color: #333333;
+            }
+            .login-form-input {
+              background-color: #f5f5f5;
+              color: #333333;
+              border-color: #e5e5e5;
+              &::placeholder {
+                color: #acacac;
               }
             }
           }
