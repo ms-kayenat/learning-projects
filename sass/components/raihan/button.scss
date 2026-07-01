@@ -1,4 +1,4 @@
-.btn {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11,20 +11,20 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.25s ease;
+  &.is-primary {
+    color: #fff;
+    background-color: #0078d4;
+    &:hover {
+      background-color: #0066b3;
+    }
+    &:active {
+      transform: translateY(1px);
+      background: #005799;
+    }
+  }
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     pointer-events: none;
-  }
-}
-.btn-primary {
-  color: #fff;
-  background: #0078d4;
-  &:hover {
-    background: #0066b3;
-  }
-  &:active {
-    transform: translateY(1px);
-    background: #005799;
   }
 }

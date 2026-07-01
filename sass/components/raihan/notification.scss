@@ -5,14 +5,14 @@
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  &.is-success{
-    background: #1eb510;
-  opacity: 60%;
-  color: #fff;
+  &.is-success {
+    background-color: #1eb510;
+    opacity: 60%;
+    color: #fff;
   }
-  &.is-danger{
-    background: #d32f2f;
-  color: #fff;
-  opacity: 60%;
+  &.is-danger {
+    background-color: #d32f2f;
+    color: #fff;
+    opacity: 60%;
   }
 }
