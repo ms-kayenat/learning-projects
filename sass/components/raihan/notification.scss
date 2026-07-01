@@ -1,0 +1,18 @@
+.notification {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  &.is-success{
+    background: #1eb510;
+  opacity: 60%;
+  color: #fff;
+  }
+  &.is-danger{
+    background: #d32f2f;
+  color: #fff;
+  opacity: 60%;
+  }
+}
