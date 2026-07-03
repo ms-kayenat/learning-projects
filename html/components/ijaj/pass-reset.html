@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Password Reset</title>
+	<link rel="stylesheet" type="text/css" href="/../../assets/css/styles.css" />
+</head>
+<body style="padding: 0 2rem ; background: #eee;">
+	<div class="password-reset">
+		<div class="password-reset-left">
+			<img src="/assets/img/lock-image.jpg" alt="Lock Image" class="password-reset-left-img">
+		</div>
+		<div class="password-reset-right">
+			<form class="password-reset-form">
+				<h3 class="form-title">Forgot Password?</h3>
+				<input class="input-form" type="email" placeholder="202101050921@buruniv.ac.in">
+				<div class="reset-method">
+					<p class="radio-text">Reset Password Via</p>
+					<div class="radio-group">
+						<label class="radio-option">
+							<input class="radio-input" type="radio" name="reset-method" value="email" checked>
+							<span>Email</span>
+						</label>
+
+						<label class="radio-option">
+							<input class="radio-input" type="radio" name="reset-method" value="mobile">
+							<span>Mobile OTP</span>
+						</label>
+					</div>
+				</div>
+				<div class="captcha">
+					<div class="captcha-upper">
+						<div class="captcha-img">
+							<img  src="../../../assets/img/captcha.png" alt="Form Captcha">
+						</div>
+						<div class="captcha-reload">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+							</svg>
+						</div>
+					</div>
+					<div class="captcha-lower">
+						<input class="captcha-input" type="text" placeholder="Captcha Here">
+						<div class="captcha-issue">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="form-buttons">
+					<button class="btn form-btn is-fill">Reset Password</button>
+    				<button class="btn form-btn">Back to Login</button>
+				</div>
+			</form>
+		</div>
+		<div class="notification">
+        <p class="notification-text">If the Login ID entered was valid, a link to reset your password has been sent to your registered Email ID.</p>
+    </div>
+	</div>
+</body>
+</html>
