@@ -1,13 +1,13 @@
 .notification {
   width: 100%;
+  box-sizing: border-box;
   padding: 16px 20px;
   border-radius: 4px;
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
   &.is-success {
-    background-color: #1eb510;
-    opacity: 60%;
+    background-color: $green-001;
     color: #fff;
   }
   &.is-danger {
