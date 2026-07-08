@@ -1,0 +1,34 @@
+.reset-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .radio-text {
+        color: #666;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    .radio-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        color: #666;
+        font-size: 14px;
+
+        input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #007bff;
+            accent-color: #007bff;
+            appearance: auto;
+            
+        }
+    }
+}

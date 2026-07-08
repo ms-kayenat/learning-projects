@@ -1,90 +1,90 @@
-.notification {
-  width: 100%;
-	background-color: $black-004;
-  border-radius: 8px; 
-  padding: 1rem;
-  margin: 1rem 0;
-  color: $white-color;
-  overflow: hidden;
-  color: $white-color;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 1rem;
-  cursor: auto;
-  .notification-icon {
-  	background-color: $black-002;
-  	min-width: 1.5rem;
-  	min-height: 1.5rem;
-  	padding: 6px;
-  	border-radius: 6px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  }
-  .notification-text {
-  	font-size: 14px;
-  }
-  .notification-items {
-  	display: flex;
-  	gap: 12px;
-  	align-items: center;
-  }
-  .checkmark-svg {
-  	width: 1rem;
-  	height: 1rem;
-  	display: flex;
-  	color: $white-color;
-  }
-  .close-svg {
-  	width: 1.5rem;
-  	height: 1.5rem;
-  	display: flex;
-  	cursor: pointer;
-  }
-  &.is-danger {
-  	background-color: rgba($red-001, .2);
-		color: $red-006;
-		.notification-icon {
-			background-color: $red-004;
-		}
-		.close-svg {
-			color: $red-004;
-		}
-  }
-  &.is-success {
-  	// background-color: rgba($green-002, .6);
-  	background-color: $green-001;
-		color: $green-006;
-		.notification-icon {
-			background-color: $green-006;
-		}
-		.close-svg {
-			color: $green-004;
-		}
-  }
-  &.is-info {
-  	background-color: $primary-002;
-		color: $primary-005;
-		.notification-icon {
-			background-color: $primary-004;
-		}
-		.close-svg {
-			color: $primary-003;
-		}
-  }
-  &.is-warning {
-  	background-color: $orange-001;
-		color: $orange-006;
-		.notification-icon {
-			background-color: $orange-005;
-		}
-		.close-svg {
-			color: $orange-004;
-		}
-  }
-  &.is-accent-01 {
-    background-color: #ff00ff26;
-    color: #a700a7;
-  }
-}
+// .notification {
+//   width: 100%;
+// 	background-color: $black-004;
+//   border-radius: 8px;
+//   padding: 1rem;
+//   margin: 1rem 0;
+//   color: $white-color;
+//   overflow: hidden;
+//   color: $white-color;
+//   display: flex;
+//   align-items: center;
+//   gap: 4px;
+//   font-size: 1rem;
+//   cursor: auto;
+//   .notification-icon {
+//   	background-color: $black-002;
+//   	min-width: 1.5rem;
+//   	min-height: 1.5rem;
+//   	padding: 6px;
+//   	border-radius: 6px;
+//   	display: flex;
+//   	align-items: center;
+//   	justify-content: center;
+//   }
+//   .notification-text {
+//   	font-size: 14px;
+//   }
+//   .notification-items {
+//   	display: flex;
+//   	gap: 12px;
+//   	align-items: center;
+//   }
+//   .checkmark-svg {
+//   	width: 1rem;
+//   	height: 1rem;
+//   	display: flex;
+//   	color: $white-color;
+//   }
+//   .close-svg {
+//   	width: 1.5rem;
+//   	height: 1.5rem;
+//   	display: flex;
+//   	cursor: pointer;
+//   }
+//   &.is-danger {
+//   	background-color: rgba($red-001, .2);
+// 		color: $red-006;
+// 		.notification-icon {
+// 			background-color: $red-004;
+// 		}
+// 		.close-svg {
+// 			color: $red-004;
+// 		}
+//   }
+//   &.is-success {
+//   	// background-color: rgba($green-002, .6);
+//   	background-color: $green-001;
+// 		color: $green-006;
+// 		.notification-icon {
+// 			background-color: $green-006;
+// 		}
+// 		.close-svg {
+// 			color: $green-004;
+// 		}
+//   }
+//   &.is-info {
+//   	background-color: $primary-002;
+// 		color: $primary-005;
+// 		.notification-icon {
+// 			background-color: $primary-004;
+// 		}
+// 		.close-svg {
+// 			color: $primary-003;
+// 		}
+//   }
+//   &.is-warning {
+//   	background-color: $orange-001;
+// 		color: $orange-006;
+// 		.notification-icon {
+// 			background-color: $orange-005;
+// 		}
+// 		.close-svg {
+// 			color: $orange-004;
+// 		}
+//   }
+//   &.is-accent-01 {
+//     background-color: #ff00ff26;
+//     color: #a700a7;
+//   }
+// }

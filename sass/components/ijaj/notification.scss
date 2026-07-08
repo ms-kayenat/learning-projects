@@ -1,0 +1,11 @@
+.notification{
+    width: 100%;
+    background: #0eca59e7;
+    &.is-red {
+        background: #e64f49;
+    }
+    &-text {
+        font-size: 20px;
+        text-align: center;
+    }
+}

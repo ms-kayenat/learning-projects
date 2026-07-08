@@ -1,0 +1,11 @@
+.form-btn {
+    color: #146af5;
+    background: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    &.is-fill {
+        background: #2775f2;
+        color: #fff;
+    }
+}
