@@ -10,7 +10,7 @@
   &-wrapper {
     width: 100%;
     max-width: 900px;
-    padding: 24px;
+    padding: 16px;
     border: 2px solid #d79d63;
     border-radius: 24px;
     background: linear-gradient(180deg, #66442cd6 0%, #21150e 100%);
@@ -51,8 +51,8 @@
       animation: pulse 1.8s ease-out infinite;
     }
     &::after {
-    animation-delay: 1s;
-  }
+      animation-delay: 1s;
+    }
   }
   &-title {
     font-size: 16px;
@@ -72,7 +72,7 @@
 }
 .card-image {
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   @include tab {
     display: none;
@@ -82,19 +82,19 @@
     width: auto;
     height: 120px;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 12px;
   }
   .image-overlay {
-  	position: absolute;
-  	inset: 0;
-  	border-radius: inherit;
-  	pointer-events: none;
-  	background: linear-gradient(
-  		to bottom,
-  		rgba(255, 177, 116, 0) 0%,
-  		rgba(255, 177, 116, 0.68) 70%,
-  		rgb(255, 177, 116) 100%
-  	);
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 177, 116, 0) 0%,
+      rgba(255, 177, 116, 0.68) 70%,
+      rgb(255, 177, 116) 100%
+    );
   }
 }
 .card-details {
@@ -128,7 +128,7 @@
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    @include tab{
+    @include tab {
       font-size: 16px;
     }
     @include tab-md {
@@ -141,17 +141,17 @@
 }
 .button {
   width: 100%;
-  min-height: 72px;
+  min-height: 52px;
   border: none;
-  border-radius: 16px;
+  border-radius: 12px;
   background-color: #ffb174;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   cursor: pointer;
   &:hover {
     background-color: #fe923a;
@@ -161,40 +161,35 @@
     transform: translateY(2px);
     background-color: #fe923a;
   }
-  @include tab{
+  @include tab {
     min-height: 52px;
-    font-size: 20px;
+    font-size: 16px;
   }
   @include tab-sm {
     min-height: 48px;
-    font-size: 18px;
     flex: 1;
     white-space: normal;
     word-break: break-word;
     line-height: 1.4;
     text-align: center;
   }
-  @include mobile{
-    min-height: 72px;
-    gap: 8px;
+  @include mobile {
+    min-height: 48px;
   }
   @include mobile-lg {
-    min-height: 88px;
-    font-size: 16px;
-    gap: 8px;
+    min-height: 64px;
+  }
+  @include mobile-md{
+    min-height: 76px;
   }
   &-icon {
-    width: 32px;
-    height: 32px;
+    width: 18px;
+    height: 18px;
     color: #ffffff;
     flex-shrink: 0;
-      @include tab-sm{
-        width: 18px;
-        height: 18px;
-    }
-    @include tab{
-      width: 20px;
-      height: 20px;
+    @include tab {
+      width: 16px;
+      height: 16px;
     }
   }
 }
