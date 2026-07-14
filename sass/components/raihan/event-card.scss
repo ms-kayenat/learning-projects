@@ -1,23 +1,10 @@
 .event-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #201812;
-  padding: 40px;
   width: 100%;
-  max-width: 100%;
-  &-wrapper {
-    width: 100%;
-    max-width: 900px;
-    padding: 16px;
-    border: 2px solid #d79d63;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #66442cd6 0%, #21150e 100%);
-    @include tab {
-      max-width: 800px;
-    }
-  }
+  padding: 16px;
+  border: 2px solid $orange-005;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #66442cd6 0%, #21150e 100%);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   &-header {
     display: flex;
     align-items: center;
@@ -32,7 +19,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: linear-gradient(#ee7115, #fdaf74);
+    background: linear-gradient(#ee7115, $orange-005);
     z-index: 1;
     border: 3.5px solid #c79a6d;
     &::before,
@@ -47,7 +34,7 @@
       border-radius: 50%;
       background-color: #b5805640;
       z-index: -1;
-      box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.18);
+      box-shadow: 0px 6px 4px #0000002e;
       animation: pulse 1.8s ease-out infinite;
     }
     &::after {
@@ -91,17 +78,17 @@
     pointer-events: none;
     background: linear-gradient(
       to bottom,
-      rgba(255, 177, 116, 0) 0%,
-      rgba(255, 177, 116, 0.68) 70%,
-      rgb(255, 177, 116) 100%
+      #ffb17400 0%,
+      #ffb174ad 70%,
+      $orange-005 100%
     );
   }
 }
 .card-details {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 16px 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
   @include tab {
     gap: 8px 0;
   }
@@ -119,13 +106,13 @@
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  color: #efb16f;
+  color: $orange-005;
   @include tab-md {
     width: 28px;
     height: 28px;
   }
   &-description {
-    color: #fff;
+    color: $white-color;
     font-size: 20px;
     font-weight: 500;
     @include tab {
@@ -139,73 +126,37 @@
 .card-footer {
   width: 100%;
 }
-.button {
+.card-cta {
   width: 100%;
-  min-height: 52px;
+  height: 52px;
   border: none;
   border-radius: 12px;
-  background-color: #ffb174;
-  color: #ffffff;
+  background-color: $orange-005;
+  color: $white-color;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
   &:hover {
-    background-color: #fe923a;
+    background-color: $orange-007;
   }
   &:active,
   &:focus {
     transform: translateY(2px);
-    background-color: #fe923a;
-  }
-  @include tab {
-    min-height: 52px;
-    font-size: 16px;
-  }
-  @include tab-sm {
-    min-height: 48px;
-    flex: 1;
-    white-space: normal;
-    word-break: break-word;
-    line-height: 1.4;
-    text-align: center;
-  }
-  @include mobile {
-    min-height: 48px;
+    background-color: $orange-007;
   }
   @include mobile-lg {
-    min-height: 64px;
-  }
-  @include mobile-md{
-    min-height: 76px;
+    font-size: 14px;
   }
   &-icon {
-    width: 18px;
-    height: 18px;
-    color: #ffffff;
+    width: 16px;
+    height: 16px;
+    color: $white-color;
     flex-shrink: 0;
-    @include tab {
-      width: 16px;
-      height: 16px;
+    @include mobile-lg {
+      display: none;
     }
-  }
-}
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.7;
-  }
-
-  60% {
-    transform: translate(-50%, -50%) scale(2.4);
-    opacity: 0.2;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(3);
-    opacity: 0;
   }
 }
