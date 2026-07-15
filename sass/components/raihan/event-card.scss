@@ -1,0 +1,174 @@
+.event-card {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid $orange-006;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #66442cd6 0%, #21150e 100%);
+  box-shadow: rgba($black-color, 0.09) 0px 2px 1px, rgba($black-color, 0.09) 0px 4px 2px, rgba($black-color, 0.09) 0px 8px 4px, rgba($black-color, 0.09) 0px 16px 8px, rgba($black-color, 0.09) 0px 32px 16px;
+  @include tab {
+  	border-radius: 16px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    @include tab {
+      margin-bottom: 24px;
+    }
+  }
+  &-title {
+    font-size: 14px;
+    color: $white-color;
+    font-weight: 500;
+  }
+}
+.card-body {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 28px;
+  @include tab {
+    margin-bottom: 24px;
+  }
+}
+.card-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  @include tab {
+    display: none;
+  }
+  .image {
+    display: block;
+    width: auto;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      rgba($orange-005, 0) 0%,
+      rgba($orange-005, 1) 100%,
+    );
+  }
+}
+.card-details {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  @include tab {
+    gap: 8px 0;
+  }
+  @include tab-sm {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: $orange-005;
+  @include tab-md {
+    width: 16px;
+    height: 16px;
+  }
+  &-description {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 500;
+    @include tab {
+      font-size: 14px;
+    }
+  }
+}
+.card-footer {
+  width: 100%;
+}
+.card-cta {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  background-color: $orange-005;
+  color: $white-color;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  &:hover {
+    background-color: $orange-007;
+  }
+  &:active,
+  &:focus {
+    transform: translateY(2px);
+    background-color: $orange-007;
+  }
+  @include mobile-lg {
+    font-size: 14px;
+  }
+  &-icon {
+    width: 16px;
+    height: 16px;
+    color: $white-color;
+    flex-shrink: 0;
+    @include mobile-lg {
+      display: none;
+    }
+  }
+}
+
+
+.status {
+	color: $orange-005;
+	font-size: 14px;
+	margin: 6px 0;
+	position: relative;
+	display: inline-flex;
+	padding-left: 16px;
+
+	&::before,
+	&::after {
+		content: "";
+		width: 14px;
+		height: 14px;
+		border-radius: 100%;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&::after {
+		background-color: $orange-005;
+	}
+	&::before {
+		background-color: rgba($orange-005, 0.25);
+		transform-origin: center;
+		animation: pulse 1.5s ease-in reverse infinite;
+	}
+
+	&.inactive {
+		color: #DB1428;
+
+		&::after {
+			background-color: #DB1428;
+		}
+		&::before {
+			animation: none;
+		}
+	}
+}
