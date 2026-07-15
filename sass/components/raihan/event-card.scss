@@ -1,49 +1,25 @@
 .event-card {
   width: 100%;
   padding: 16px;
-  border: 2px solid $orange-005;
+  border: 2px solid $orange-006;
   border-radius: 24px;
   background: linear-gradient(180deg, #66442cd6 0%, #21150e 100%);
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba($black-color, 0.09) 0px 2px 1px, rgba($black-color, 0.09) 0px 4px 2px, rgba($black-color, 0.09) 0px 8px 4px, rgba($black-color, 0.09) 0px 16px 8px, rgba($black-color, 0.09) 0px 32px 16px;
+  @include tab {
+  	border-radius: 16px;
+  }
   &-header {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     margin-bottom: 28px;
     @include tab {
       margin-bottom: 24px;
     }
   }
-  &-status {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: linear-gradient(#ee7115, $orange-005);
-    z-index: 1;
-    border: 3.5px solid #c79a6d;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 24px;
-      height: 24px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background-color: #b5805640;
-      z-index: -1;
-      box-shadow: 0px 6px 4px #0000002e;
-      animation: pulse 1.8s ease-out infinite;
-    }
-    &::after {
-      animation-delay: 1s;
-    }
-  }
   &-title {
-    font-size: 16px;
-    color: #ffffffa8;
+    font-size: 14px;
+    color: $white-color;
     font-weight: 500;
   }
 }
@@ -54,7 +30,6 @@
   margin-bottom: 28px;
   @include tab {
     margin-bottom: 24px;
-    padding: 0 0 0 12px;
   }
 }
 .card-image {
@@ -78,9 +53,8 @@
     pointer-events: none;
     background: linear-gradient(
       to bottom,
-      #ffb17400 0%,
-      #ffb174ad 70%,
-      $orange-005 100%
+      rgba($orange-005, 0) 0%,
+      rgba($orange-005, 1) 100%,
     );
   }
 }
@@ -103,23 +77,20 @@
   gap: 12px;
 }
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
   color: $orange-005;
   @include tab-md {
-    width: 28px;
-    height: 28px;
+    width: 16px;
+    height: 16px;
   }
   &-description {
     color: $white-color;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     @include tab {
-      font-size: 16px;
-    }
-    @include tab-md {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
@@ -159,4 +130,45 @@
       display: none;
     }
   }
+}
+
+
+.status {
+	color: $orange-005;
+	font-size: 14px;
+	margin: 6px 0;
+	position: relative;
+	display: inline-flex;
+	padding-left: 16px;
+
+	&::before,
+	&::after {
+		content: "";
+		width: 14px;
+		height: 14px;
+		border-radius: 100%;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&::after {
+		background-color: $orange-005;
+	}
+	&::before {
+		background-color: rgba($orange-005, 0.25);
+		transform-origin: center;
+		animation: pulse 1.5s ease-in reverse infinite;
+	}
+
+	&.inactive {
+		color: #DB1428;
+
+		&::after {
+			background-color: #DB1428;
+		}
+		&::before {
+			animation: none;
+		}
+	}
 }
