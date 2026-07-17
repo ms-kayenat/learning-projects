@@ -1,0 +1,40 @@
+$yellow-008: #ffa735;
+.construction-card {
+  padding: 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 14px 0px 20px 4px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  .yellow-patch {
+    float: right;
+    width: 28px;
+    height: 68px;
+    background-color: #ffa735;
+    margin-top: -28px;
+    margin-left: 4px;
+  }
+}
+.content {
+  width: 100%;
+  &-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: $yellow-008;
+    margin-bottom: 8px;
+    @include mobile-lg{
+      font-size: 16px;
+    }
+  }
+  &-description {
+    padding-left: 4px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.735);
+    font-weight: 500;
+    @include mobile-lg{
+      font-size: 20px;
+    }
+  }
+}
