@@ -1,5 +1,14 @@
 .section {
-  background-color: #e6e9fe;
+  &.construction-section {
+	  background-color: #e6e9fe;
+	  min-height: 100vh;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  .section-mask {
+	  	width: 100%;
+	  }
+  }
   .section-content {
     display: flex;
     justify-content: space-between;
@@ -9,9 +18,9 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 600px;
     gap: 16px;
-    justify-content: flex-start;
+
   }
   .section-right {
     width: 50%;
@@ -24,11 +33,11 @@
     width: fit-content;
   }
   .section-image {
-    width: 412px;
-    overflow: hidden;
+    height: 100%;
+  	max-height: 600px;
     .building-image {
       width: 100%;
-      height: 408px;
+      height: 100%;
       display: block;
       object-fit: cover;
       object-position: center;
@@ -37,12 +46,16 @@
   .section-buttons {
     display: flex;
     gap: 16px;
-    width: 100%;
+    margin-top: 1rem;
     .button-hero,
     .button {
-      width: 100%;
-      max-width: 160px;
-      height: 40px;
+      height: 2.5rem;
+      &.is-outlined {
+      	border-color: #ffbc65;;
+      	&:hover {
+      		background: linear-gradient(to right, #ffa735, #ffc06e);;
+      	}
+      }
     }
   }
   .section-text {
@@ -51,23 +64,23 @@
   .section-subtext {
     width: 100%;
   }
-}
-.construction-card-container {
-  width: 230px;
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  transform: translateY(-50%);
-}
-.grid-lines {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: space-evenly;
-  pointer-events: none;
-  span {
-    width: 1px;
-    height: 100%;
-    background: rgba(70, 100, 255, 0.08);
-  }
+	.construction-card {
+	  width: 300px;
+	  position: absolute;
+	  top: 50%;
+	  right: -40px;
+	  transform: translateY(-50%);
+	}
+	.grid-lines {
+	  position: fixed;
+	  inset: 0;
+	  display: flex;
+	  justify-content: space-evenly;
+	  pointer-events: none;
+	  span {
+	    width: 1px;
+	    height: 100%;
+	    background: rgba(70, 100, 255, 0.08);
+	  }
+	}
 }

@@ -32,11 +32,6 @@ $button-hero-height-lg: 3rem;
 			background: inherit;
 		}
 	}
-  &.is-transparent{
-    background: transparent;
-    border: 2px solid $orange-006;
-    color: $orange-006;
-  }
 	&.is-md {
 		padding-left: $button-hero-padding-x-md;
 		padding-right: $button-hero-padding-x-md;
