@@ -75,8 +75,8 @@ $button-white-disabled-bg-color: 		$black-006;
 	}
 
 	@include mobile {
-		font-size: 14px;
-		padding: 16px 20px;
+		font-size: 1rem;
+		// padding: 16px 20px;
 		height: 2.5rem;
 		gap: 8px;
 	}

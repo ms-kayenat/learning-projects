@@ -26,6 +26,12 @@ $yellow-008: #ffa735;
     @include mobile-lg {
       font-size: 16px;
     }
+    @include desktop-sm-2 {
+      font-size: 16px;
+    }
+    @include tab {
+      font-size: 14px;
+    }
   }
   &-description {
     padding-left: 4px;
@@ -34,6 +40,12 @@ $yellow-008: #ffa735;
     font-weight: 500;
     @include mobile-lg {
       font-size: 20px;
+    }
+    @include desktop-sm-2 {
+      font-size: 14px;
+    }
+    @include tab {
+      font-size: 12px;
     }
   }
 }

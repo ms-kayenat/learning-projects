@@ -41,7 +41,7 @@
 		font-size: 52px;
 	}
 	@include tab {
-		font-size: 32px;
+		font-size: 48px;
 		line-height: 1.2;
 		&.font-50 {
 			font-size: 30px;
@@ -68,18 +68,17 @@
 			}
 		}
 	}
-	@include tab-sm {
-		font-size: 36px;
-		line-height: 1.2;
-	}
+	// @include tab-sm {
+	// 	font-size: 44px;
+	// 	line-height: 1.2;
+	// }
 	@include mobile {
-		font-size: 32px;
+		font-size: 40px;
 	}
 	@include mobile-lg {
-		font-size: 16px;
+		// font-size: 16px;
 	}
 }
-
 .font-30 {
 	font-size: 30px !important;
 	@include tab {
@@ -95,10 +94,18 @@
 		font-size: 14px !important;
 	}
 }
-
 .section-subtitle {
 	font-size: 32px;	
 	color: $black-005;
 	line-height: 1.2;
 	margin-top: 12px;
+	@include desktop-sm-2 {
+		font-size: 24px;
+	}
+	@include desktop {
+		font-size: 20px;
+	}
+	@include mobile {
+		font-size: 18px;
+	}
 }
