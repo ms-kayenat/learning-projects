@@ -1,15 +1,13 @@
-.section-title {
+.section-title,.title {
 	font-size: 72px;
 	font-weight: 700;
 	color: $black-color;
 	line-height: 1.2;
-
 	&.is-white {
 		color: $primary-001;
 		text-shadow: 1px 0 $white-color, -1px 0 $white-color, 0 1px $white-color, 0 -1px $white-color,
 		1px 1px $white-color, -1px -1px $white-color, 1px -1px $white-color, -1px 1px $white-color;
 	}
-
 	&.is-lg {
 		font-size: 110px;
 		@include desktop {
@@ -68,15 +66,8 @@
 			}
 		}
 	}
-	// @include tab-sm {
-	// 	font-size: 44px;
-	// 	line-height: 1.2;
-	// }
 	@include mobile {
 		font-size: 40px;
-	}
-	@include mobile-lg {
-		// font-size: 16px;
 	}
 }
 .font-30 {
@@ -94,7 +85,7 @@
 		font-size: 14px !important;
 	}
 }
-.section-subtitle {
+.section-subtitle, .sub-title {
 	font-size: 32px;	
 	color: $black-005;
 	line-height: 1.2;
