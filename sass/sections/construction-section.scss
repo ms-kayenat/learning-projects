@@ -1,13 +1,20 @@
 .section {
   &.construction-section {
-	  background-color: #e6e9fe;
-	  min-height: 100vh;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  .section-mask {
-	  	width: 100%;
-	  }
+    background-color: #e6e9fe;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .section-mask {
+      width: 100%;
+      .section-container {
+        .section-wrapper {
+          @include tab {
+            padding-top: 5rem;
+          }
+        }
+      }
+    }
   }
   .section-content {
     display: flex;
@@ -49,8 +56,8 @@
   }
   .section-image {
     height: 100%;
-  	max-height: 600px;
-    @include desktop-sm-2{
+    max-height: 600px;
+    @include desktop-sm-2 {
       max-height: 480px;
     }
     @include tab {
@@ -77,10 +84,10 @@
     .button {
       height: 2.5rem;
       &.is-outlined {
-      	border-color: #ffbc65;;
-      	&:hover {
-      		background: linear-gradient(to right, #ffa735, #ffc06e);;
-      	}
+        border-color: #ffbc65;
+        &:hover {
+          background: linear-gradient(to right, #ffa735, #ffc06e);
+        }
       }
     }
   }
@@ -90,14 +97,14 @@
   .section-subtext {
     width: 100%;
   }
-	.construction-card {
+  .construction-card {
     width: 100%;
-	  max-width: 300px;
-	  position: absolute;
-	  top: 50%;
-	  right: -40px;
-	  transform: translateY(-50%);
-    @include desktop-sm-2{
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    @include desktop-sm-2 {
       max-width: 228px;
       max-height: 120px;
     }
@@ -108,17 +115,17 @@
     @include mobile-lg {
       max-width: 192px;
     }
-	}
-	.grid-lines {
-	  position: fixed;
-	  inset: 0;
-	  display: flex;
-	  justify-content: space-evenly;
-	  pointer-events: none;
-	  span {
-	    width: 1px;
-	    height: 100%;
-	    background: rgba(70, 100, 255, 0.08);
-	  }
-	}
+  }
+  .grid-lines {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: space-evenly;
+    pointer-events: none;
+    span {
+      width: 1px;
+      height: 100%;
+      background: rgba(70, 100, 255, 0.08);
+    }
+  }
 }
