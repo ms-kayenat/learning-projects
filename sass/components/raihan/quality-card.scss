@@ -1,0 +1,46 @@
+$light-green:#e2ffed;
+.quality-card {
+  width: 100%;
+  border: 1px solid $black-color;
+  border-radius: 16px;
+  overflow: hidden;
+    background: transparent;
+  &-title {
+    background: $black-006;
+    color: $black-color;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 18px 16px;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 24px;
+    text-align: center;
+    gap: 16px;
+  }
+  &-icon {
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+    border: 1px solid $black-color;
+    border-radius: 50%;
+    color: $black-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heart-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &-description {
+    color: $black-color;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+}
