@@ -1,0 +1,15 @@
+.product-list {
+	display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+.product-card{
+    max-width: 268px;
+    width: 100%;
+}
+.product-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}

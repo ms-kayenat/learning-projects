@@ -1,0 +1,113 @@
+$primary:#e2f8fe;
+$aqua:#e1f9fe;
+$peach:#ffe7df;
+$blue:#dcfafb;
+.product-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 28px 24px;
+  &.is-primary {
+    background-color: $primary;
+  }
+  &.is-aqua {
+    background-color: $aqua;
+  }
+  &.is-peach {
+    background-color: $peach;
+  }
+  &.is-blue {
+    background-color: $blue;
+  }
+  &.has-shadow {
+      box-shadow: rgba(0, 0, 0, 0.1) 8px 20px 20px 0px;
+    }
+  &-left{
+    display: none;
+  }
+  &-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &-wrapper{
+      padding: 0 8px;
+    }
+    .shoe-image {
+      width: 100%;
+    }
+    .card-bottom {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      &-left,
+      &-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &-center {
+        display: flex;
+        flex-direction: column;
+        .price-original {
+          font-size: 16px;
+          font-weight: 400;
+          text-align: center;
+          color: #f198a2;
+        }
+        .price-discounted {
+          font-size: 20px;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &.has-tag {
+    padding: 0;
+    align-items: stretch;
+    overflow: hidden;
+    .product-card-left{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      background: $black-color;
+    }
+    .product-card-right{
+      width: 80%;
+    }
+    .product-card-right-wrapper{
+      padding: 28px 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .product-tag {
+      color: #ffffffe6;
+      font-size: 16px;
+      font-weight: 600;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+  .product-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+		cursor: pointer;
+		&:hover {
+    	transform: scale(1.1);
+    	opacity: 0.8;
+  	}
+  	&:active {
+    	transform: scale(0.95);
+  	}
+  }
+}
