@@ -1,12 +1,41 @@
 .product-list {
 	display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3rem;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+	}
+	@include tab-md {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+	@include mobile {
+		gap: .75rem;
+	}
 }
-.product-card{
-    max-width: 268px;
-    width: 100%;
+
+.product-card {
+	width: 100%;
+	background-color: $primary-color;
+
+	&:nth-child(4n + 1) {
+		background-color: $primary-color;
+	}
+
+	&:nth-child(4n + 2) {
+		background-color: $aqua-color;
+	}
+
+	&:nth-child(4n + 3) {
+		background-color: $peach-color;
+	}
+
+	&:nth-child(4n + 4) {
+		background-color: $blue-color;
+	}
 }
-.section-title{
-    text-align: left;
+
+.section-title {
+	text-align: left;
 }
