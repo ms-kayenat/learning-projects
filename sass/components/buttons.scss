@@ -29,9 +29,9 @@ $button-white-hover-bg-color: #f0f0f0;
 $button-white-disabled-bg-color: $black-006;
 
 $button-trial-bg-color: #2d004d;
-  $button-trial-hover-bg-color: #6b5fa6;
-  $button-trial-disabled-bg-color: #b8b1d3;
-  $button-trial-text-color: #fff;
+$button-trial-hover-bg-color: #542377;
+$button-trial-disabled-bg-color: #b8b1d3;
+$button-trial-text-color: #fff;
 
 .button {
   @include button-reset;
@@ -457,7 +457,7 @@ $button-trial-bg-color: #2d004d;
       }
     }
   }
-  &.is-pricing {
+  &.is-purple {
     background-color: $button-trial-bg-color;
     color: $button-trial-text-color;
     border-radius: 12px;

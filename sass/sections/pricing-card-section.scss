@@ -1,19 +1,32 @@
-.pricing-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    @include desktop-sm-2{
-        grid-template-columns: repeat(2, 1fr);
+// .pricing-card-container{
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 32px;
+//     @include desktop-sm-2{
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+//     @include tab{
+//         grid-template-columns: 1fr;
+//     }
+// }
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  @include desktop-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tab {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card{
+    width: 100%;
+    justify-self: center;
+    @include desktop-sm-2 {
+      max-width: 500px;
     }
-    @include tab{
-        grid-template-columns: 1fr;
-    }
-}
-.pricing-card-wrapper{
-  width: 100%;
-  max-width: 412px;
-  justify-self: center;
-}
-.pricing-card{
-  width: 100%;
+    // @include tab {
+    //   max-width: 450px;
+    // }
+  }
 }
