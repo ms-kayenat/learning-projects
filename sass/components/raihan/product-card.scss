@@ -101,11 +101,4 @@
 			transform: translateX(0);
 		}
 	}
-	@include tab {
-		.product-card-left {
-			padding: 1rem;
-			width: auto;
-			transform: translateX(0);
-		}
-	}
 }

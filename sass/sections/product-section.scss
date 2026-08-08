@@ -10,32 +10,35 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 	}
+  @include tab-sm {
+    grid-template-columns: 1fr;
+  }
 	@include mobile {
 		gap: .75rem;
 	}
+  .product-card {
+    justify-self: center;
+    @include tab-sm {
+      max-width: 300px;
+    }
+  }
 }
-
 .product-card {
 	width: 100%;
 	background-color: $primary-color;
-
 	&:nth-child(4n + 1) {
 		background-color: $primary-color;
 	}
-
 	&:nth-child(4n + 2) {
 		background-color: $aqua-color;
 	}
-
 	&:nth-child(4n + 3) {
 		background-color: $peach-color;
 	}
-
 	&:nth-child(4n + 4) {
 		background-color: $blue-color;
 	}
 }
-
 .section-title {
 	text-align: left;
 }
