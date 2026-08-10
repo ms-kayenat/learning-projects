@@ -1,0 +1,132 @@
+$section-padding: 5rem; // 80px;
+$section-padding-tab: 2.5rem; // 40px;
+$section-bgcolor: $white-color;
+
+.section {
+	position: relative;
+	background-color: $section-bgcolor;
+	.section-mask {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		.section-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+		}
+		.section-container {
+			position: relative;
+			z-index: 2;
+			padding: 0 2rem;
+			height: 100%;
+			max-width: $container-width;
+			margin: 0 auto;
+			@include tab {
+				padding: 0 1rem;
+			}
+			&.is-width-full {
+				max-width: 100%;
+			}
+			.section-wrapper {
+				padding-top: $section-padding;
+				padding-bottom: $section-padding;
+				height: 100%;
+				@include tab {
+					padding-top: $section-padding-tab;
+					padding-bottom: $section-padding-tab;
+				}
+			}
+		}
+
+		.section-body {
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
+			@include tab {
+				gap: 42px;
+			}
+			@include mobile {
+				gap: 30px;
+			}
+		}
+	}
+
+	.section-columns {
+		display: flex;
+		height: 100%;
+		margin-left: -.625rem;
+		margin-right: -.625rem;
+		align-items: stretch;
+
+		.section-column {
+			flex: 1;
+			padding-left: .625rem;
+			padding-right: .625rem;
+		}
+	}
+
+	// No padding in wrapper if section is marked slim
+	&.is-slim {
+		.section-mask {
+			.section-container {
+				.section-wrapper {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	&.is-slim {
+		.section-mask {
+			.section-container {
+				.section-wrapper {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	&.width-full {
+		.section-mask {
+			.section-container {
+				max-width: 100%;
+				padding: 0 2rem;
+				@include tab {
+					padding: 0 1rem;
+				}
+				.section-texts {
+					max-width: 100%;
+				}
+			}
+		}	
+	}
+	&.height-full {
+		.section-mask {
+			.section-container {
+				.container {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.section {
+		.section-columns {
+			flex-direction: column;
+			// height: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			align-items: stretch;
+
+			.section-column {
+				flex: 1;
+				padding: .625rem 0;
+			}
+		}
+	}
+}

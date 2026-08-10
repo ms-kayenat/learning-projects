@@ -1,0 +1,20 @@
+$border: #e8e8ef;
+$bg: #fff;
+.pricing-card {
+  background: $bg;
+  border: 1px solid $border;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &-addons {
+    border-top: 1px solid $border;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+  &-button {
+    border-top: 1px solid $border;
+    padding: 32px;
+  }
+}
