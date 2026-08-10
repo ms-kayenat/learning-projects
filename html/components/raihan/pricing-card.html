@@ -70,7 +70,7 @@
                             </svg>
                         </div>
                     </div>
-                    <input type="range" class="pricing-card-addons-slider" min="0" max="50" value="32">
+                    <input type="range" class="range" min="0" max="50" value="32">
                 </div>
                 <input type="text" class="pricing-card-addons-count" value="32" readonly>
             </div>
@@ -103,7 +103,7 @@
         </div>
     </div>
     <script>
-        const sliders = document.querySelectorAll(".pricing-card-addons-slider");
+        const sliders = document.querySelectorAll(".range");
 sliders.forEach((slider) => {
     const count = slider
         .closest(".pricing-card-addons-header")
