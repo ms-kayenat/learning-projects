@@ -20,10 +20,13 @@ $section-bgcolor: $white-color;
 		.section-container {
 			position: relative;
 			z-index: 2;
-			padding: 0 1rem;
+			padding: 0 2rem;
 			height: 100%;
-			max-width: 1400px;
+			max-width: $container-width;
 			margin: 0 auto;
+			@include tab {
+				padding: 0 1rem;
+			}
 			&.is-width-full {
 				max-width: 100%;
 			}
@@ -85,6 +88,20 @@ $section-bgcolor: $white-color;
 				}
 			}
 		}
+	}
+	&.width-full {
+		.section-mask {
+			.section-container {
+				max-width: 100%;
+				padding: 0 2rem;
+				@include tab {
+					padding: 0 1rem;
+				}
+				.section-texts {
+					max-width: 100%;
+				}
+			}
+		}	
 	}
 	&.height-full {
 		.section-mask {

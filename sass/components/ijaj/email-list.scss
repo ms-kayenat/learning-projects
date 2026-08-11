@@ -1,0 +1,125 @@
+.email-list {
+  background: #F8F9FA;
+  border: 1px solid #E9EAEC;
+  border-radius: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+  &-top {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #E9EAEC;
+    @include tab-sm {
+      padding: 1rem;
+    }
+    .email-title {
+      font-family: 'Roboto Slab', sans-serif;
+      color: #555555;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      @include tab-sm {
+        font-size: 1.5rem;
+      }
+    }
+    .email-subtitle {
+      color: #898989;
+      font-family: 'Roboto', sans-serif;
+      @include tab-sm {
+        font-size: 12px;
+      }
+    }
+  }
+  &-bottom {
+    padding: 1.5rem 2rem;
+    @include tab-sm {
+      padding: 1rem;
+    }
+    .emails {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid #E9EAEC;
+      border-radius: 24px;
+      height: 100%;
+      max-height: 600px;
+      overflow: hidden;
+      overflow-y: auto;
+      @include tab-sm {
+        gap: 12px;
+        padding: .5rem;
+      }
+
+      .email-row:not(:last-child) {
+        border-bottom: 1px solid #E5E7EB;
+      }
+      .email-row {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        padding: .5rem;
+        border-radius: 8px;
+        overflow-x: hidden;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        &:hover {
+          background-color: #F3F4F6;
+        }
+        &-left {
+          .email-icon-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            border: 1px solid #E5E7EB;
+            border-radius: 50%;
+            .email-icon {
+              color: #582458;
+            }
+          }
+        }
+        &-right {
+          width: 100%;
+          gap: 1rem;
+          padding-bottom: 1rem;
+          min-width: 0;
+               @include tab-sm {
+                  gap: 12px;
+              }
+          .email-user-header {
+            display: flex;
+            justify-content: space-between;
+            color: #888888;
+            margin-bottom: 1rem;
+            @include tab-sm {
+              margin-bottom: 0.5rem;
+              font-size: 12px;
+            }
+          }
+          .email-subject {
+            color: #555555;
+            margin-bottom: 0.5rem;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.25rem;
+            letter-spacing: -0.01em;
+            @include tab-sm {
+              font-size: .8rem;
+            }
+          }
+          .email-text {
+            color: #9C9BA6;
+            line-height: 1.8rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include tab-sm {
+              line-height: 1.25rem;
+              font-size: .7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
