@@ -1,0 +1,29 @@
+// .section-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+// .quality-section {
+//   &-item {
+//     margin-bottom: 90px;
+//     max-width: 550px;
+//     opacity: 0;
+//     transition: all 0.7s ease;
+//     &:nth-child(odd) {
+//       transform: translateX(-120px) rotate(10deg);
+//     }
+//     &:nth-child(even) {
+//       transform: translateX(120px) rotate(-10deg);
+//     }
+//     &.show {
+//       opacity: 1;
+//     }
+//     &.show:nth-child(odd) {
+//       transform: translateX(0) rotate(10deg);
+//     }
+
+//     &.show:nth-child(even) {
+//       transform: translateX(0) rotate(-10deg);
+//     }
+//   }
+// }
