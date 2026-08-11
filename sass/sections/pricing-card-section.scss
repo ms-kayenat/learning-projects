@@ -1,0 +1,19 @@
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-self: center;
+  @include desktop-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tab-md {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card{
+    width: 100%;
+    justify-self: center;
+    @include desktop-sm-2 {
+      max-width: 412px;
+    }
+  }
+}
