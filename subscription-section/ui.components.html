@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui Commponents</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+<!-- Subscription Section issue 28  Commponents Below -, -->
+<!-- Colors  -->
+<!-- background: linear-gradient(100deg, #f38f73, #f7ab6d); ,-->
+<!-- #f58f79  ,  -->
+
+<!-- Subscription Section Tabs  -->
+
+<!-- buttons-->
+ <div class="gradient-button">
+    <button class="btn-rounded">rounded</button>
+    <br>
+    <button class="btn-rounded-gradient">gradient button</button>
+    <br>
+    <button class="btn-rounded-hover">hover Button</button>
+    <br>
+    <button class="btn-is-active btn-rounded">click me</button>
+
+ </div>
+
+ <!-- tabs components -->
+
+ <div class="tabs-rounded">
+    <button class="btn-rounded btn is-active">btn 1</button>
+    <button class="btn-rounded btn">btn 2</button>
+    <button class="btn-rounded btn">btn 3</button>
+ </div>
+
+
+ <!-- card components -->
+
+ <div class="card rounded-sm">
+    <div class="card-image rounded-sm">
+        <img src="assets/img/image.png" alt="" class="img-image">
+        <div class="card-img-text">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia distinctio voluptatibus aspernatur?</p>
+        </div>
+    </div>
+ </div>
+
+
+ <!-- Gradient card -->
+<div class="card rounded-sm">
+
+    <div class="card-gradient rounded-sm col-center">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    </div>
+</div>
+
+
+
+    
+<script>
+//    const btn =  document.querySelectorAll('button')
+//    array.forEach(e => {
+//     if(btn === e.target){
+//         btn.classList.add("btn-is-active")
+//     }else{
+//         btn.classList.remove("btn-is-active")
+
+//     }
+//    }); // adeventlisner mistake, biggner method . improving 
+
+// best way : ->
+
+//select parent elm
+const btnGroup = document.querySelector('.tabs-rounded')
+btnGroup.addEventListener('click',(e)=>{
+    // checking  btn class clicked or not
+    const clickedBtn = e.target.closest(".btn")
+    //if not then return 
+    if(!clickedBtn)return;
+
+    // searching already active class and then removing
+    const currentActiveBtn = btnGroup.querySelector('.is-active');
+    if(currentActiveBtn){
+        currentActiveBtn.classList.remove('is-active');
+
+    }
+    // next not selected if click then ..
+    clickedBtn.classList.add('is-active');
+})
+</script>
+
+</body>
+</html>
