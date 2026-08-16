@@ -10,40 +10,7 @@
       href="/../../assets/css/styles.css"
     />
   </head>
-  <body style="padding: 2rem">
+  <body>
 
-
-	<div class="tabs-rounded full-center">
-		<!-- // btn class for js .. -->
-        <button class="btn btn-rounded is-active">Spinn Blend Subscription</button>
-        <button class="btn btn-rounded">Auto Order</button>
-        <button class="btn btn-rounded">Maintenance Subscription</button>
-      </div>
-
-
-
-
-
-
-
-
-	<!-- // -->
-    <script>
-      const btnGroup = document.querySelector(".tabs-rounded");
-      btnGroup.addEventListener("click", (e) => {
-        // checking  btn class clicked or not
-        const clickedBtn = e.target.closest(".btn");
-        //if not then return
-        if (!clickedBtn) return;
-
-        // searching already active class and then removing
-        const currentActiveBtn = btnGroup.querySelector(".is-active");
-        if (currentActiveBtn) {
-          currentActiveBtn.classList.remove("is-active");
-        }
-        // next not selected if click then ..
-        clickedBtn.classList.add("is-active");
-      });
-    </script>
   </body>
 </html>
