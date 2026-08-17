@@ -13,11 +13,10 @@
       width: 60px;
       height: 60px;
       border-radius: 30%;
-      background-color: rgba($black-002,0.6);
+      background-color: rgba($black-002, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
-
       .phone-icon {
         width: 36px;
         height: 36px;
@@ -30,9 +29,9 @@
     align-items: center;
     font-weight: 600;
     font-size: 24px;
-    color: rgba($black-005,0.95);
+    color: rgba($black-005, 0.95);
   }
-  &-body{
+  &-body {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -63,7 +62,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 20px;
-      background-color: rgba($green-002,0.5);
+      background-color: rgba($green-002, 0.5);
       width: 64px;
       height: 28px;
       &-value {
@@ -80,7 +79,7 @@
       }
     }
     &-text {
-      color: rgba($black-004,0.6);
+      color: rgba($black-004, 0.6);
       font-size: 16px;
       font-weight: 600;
     }
@@ -88,9 +87,9 @@
   &-footer {
     display: flex;
     justify-content: space-between;
-    &-text{
+    &-text {
       font-size: 16px;
-      color: rgba($black-004,0.6);
+      color: rgba($black-004, 0.6);
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -118,8 +117,8 @@
       border-radius: 12px;
       background: repeating-linear-gradient(
         45deg,
-        rgba($black-001,0.85) 0,
-        rgba($black-001,0.85) 2px,
+        rgba($black-001, 0.85) 0,
+        rgba($black-001, 0.85) 2px,
         transparent 2px,
         transparent 7px
       );
@@ -139,29 +138,12 @@
         }
       }
     }
-    &:nth-child(1) {
-      .chart-bar-fill {
-        height: 80px;
-      }
-    }
-    &:nth-child(2) {
-      .chart-bar-fill {
-        height: 100px;
-      }
-    }
-    &:nth-child(3) {
-      .chart-bar-fill {
-        height: 60px;
-      }
-    }
     .chart-label {
       font-size: 20px;
       font-weight: 600;
       color: rgba($black-003,0.85);
-    }
-    &:nth-child(2) {
-      .chart-label {
-        color: rgba($black-color,0.8);
+      &.today {
+        color:rgba($black-color,0.85);
       }
     }
   }
