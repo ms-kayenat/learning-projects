@@ -1,0 +1,13 @@
+.subscription-shipping-btn {
+  @extend .button;
+  width: 100%;
+  max-width: 400px;
+  min-height: 63px;
+}
+
+.subscription-subscribe-btn {
+  @extend .button;
+  background-color: $black-color;
+  color: $white-color;
+  font-weight: 400;
+}

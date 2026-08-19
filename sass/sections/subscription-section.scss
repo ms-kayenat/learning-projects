@@ -1,0 +1,121 @@
+.subscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 2.7rem;
+  }
+  &-subtitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .subscription-section-banner-cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    &-left {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1.5fr 5fr);
+      justify-items: end;
+
+      &-btn {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        height: 100%;
+      }
+    }
+
+    &-right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 170px);
+      overflow: hidden;
+      gap: 0.5rem;
+
+      &-card1 {
+        background: linear-gradient(180deg, #fba296 0%, #eb8b7f 100%);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 12px;
+        color: $white-color;
+        padding: 0.5rem;
+      }
+      &-card2 {
+        height: 200px;
+        overflow: hidden;
+        border-radius: 12px;
+        padding: 0.5rem;
+
+        .right-card2-img {
+          width: 100%;
+
+          &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+      }
+      &-card3 {
+        display: flex;
+        text-align: center;
+        grid-column: span 2;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        background: linear-gradient(180deg, #fba296 0%, #eb8b7f 100%);
+        border-radius: 12px;
+        color: $white-color;
+
+        .right-card3-content-left {
+          &-img-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            padding: 0.5rem;
+          }
+        }
+
+        .right-card3-content-right {
+        }
+      }
+      &-card4 {
+        border-radius: 20px;
+        padding: 0.5rem;
+        .right-card4-img-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 20px;
+        }
+      }
+      &-card5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.4rem;
+        color: $white-color;
+        background: linear-gradient(180deg, #fba296 0%, #eb8b7f 100%);
+        border-radius: 20px;
+      }
+    }
+  }
+}
