@@ -1,53 +1,79 @@
-.subscription-image-card {
-  width: 100%;
-  max-width: 400px;
-  height: fit-content;
-  overflow: hidden;
-  box-shadow: 1px 1px 3px $gray-001;
-  border-radius: 10px;
-  position: relative;
-  aspect-ratio: 1/1;
-
-  &-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.445));
-  }
-
-  &-text {
-    position: absolute;
-    z-index: 3;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    width: 95%;
-    text-align: center;
-    color: $white-color;
-    &-title {
-      font-size: 3.125rem;
-      line-height: 3.5rem;
-      font-weight: 600;
+.coffee-card-box {
+  width: 400px;
+  height: 400px;
+  .coffee-card {
+    position: relative;
+    flex: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 0;
+    @include mobile {
+      height: 280px;
     }
-
-    &-desc {
-      font-size: smaller;
-      margin-top: 0.4rem;
-      text-align: center;
+    &-image {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1rem 0.75rem;
+      text-align: center;
+      color: $white-color;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.35) 70%,
+        transparent 100%
+      );
+    }
+    &-title {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 0;
+      @include tab {
+        font-size: 2.5rem;
+      }
+      @include tab-sm {
+        font-size: 2rem;
+      }
+    }
+    &-description {
+      font-size: 0.8rem;
+      line-height: 1.35;
+      margin: 0 auto;
+      max-width: 92%;
+      opacity: 0.95;
+      @include tab {
+        font-size: 0.72rem;
+      }
+    }
+  }
+}
+.shipping-card {
+  height: 60px;
+  background-color: #f1846c;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  flex-shrink: 0;
+  @include tab {
+    height: 52px;
+  }
+  &-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    @include tab {
+      font-size: 0.95rem;
     }
   }
 }
