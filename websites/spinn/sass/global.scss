@@ -1,0 +1,116 @@
+.text-black {
+	color: $black-color !important;
+} 
+html {
+    font-size: 16px; 
+}
+.bg-black {
+	background-color: $black-color !important;
+}
+.bg-transparent {
+	background: transparent !important;
+}
+.bg-white {
+	background-color: $white-color !important;
+}
+.space-btwn {
+	display: flex;
+	justify-content: space-between;
+}
+.hide-in-desktop {
+	display: none;
+}
+.show-in-mob {
+	display: none;
+	@include mobile {
+		display: flex;
+	}
+}
+.pb-0 {
+	padding-bottom: 0 !important;
+}
+.pb-6rem {
+	padding-bottom: 6rem !important;
+	@include mobile {
+		padding-bottom: 3rem !important;
+	}
+}
+.mono-chromatic {
+	filter: saturate(.2);
+}
+.p-24px {
+	padding: 24px !important;
+}
+.pt-0 {
+	padding-top: 0 !important;
+}
+.pt-1rem {
+	padding-top: 1rem !important;
+}
+.pt-2rem {
+	padding-top: 2rem !important;
+}
+.pt-6rem {
+	padding-top: 6rem !important;
+}
+.pb-2rem {
+	padding-bottom: 2rem !important;
+}
+.pb-3rem {
+	padding-bottom: 3rem !important;
+}
+.mt-2rem {
+	margin-top: 2rem !important;
+}
+.margin-inherit {
+	margin: inherit !important;
+}
+.m-0-auto {
+	margin: 0 auto !important;
+}
+.col-gap-2rem {
+	display: grid;
+	column-gap: 2rem !important;
+}
+
+.cut-price {
+	text-decoration: line-through !important;
+	color: $black-003 !important;
+}
+.has-2-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex-col {
+	flex-direction: column !important;
+}
+.hide-in-desktop {
+	@include desktop {
+		// display: none !important;
+		opacity: 0;
+		visibility: visible;
+	}
+}
+.show-in-desktop {
+	// display: none !important;
+	opacity: 0;
+	visibility: visible;
+	@include desktop {
+		// display: flex !important;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.is-italic {
+	font-style: italic;
+}
+.font-14 {
+	font-size: 14px !important;
+}
+.text-black {
+	color: $black-color !important;
+}
+.text-white {
+	color: $white-color !important;
+}
