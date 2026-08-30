@@ -1,61 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 .hamper-card {
-    border: 2px solid $primary-005;
-    border-radius: 1.8rem;
-    max-width: 300px;
-    overflow: hidden;
-    &-img {
-        width: 100%;
-        max-height: 300px;
-        overflow: hidden;
-        z-index: 0;
-        .hamper-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    .hamper-contents {
-        padding: 1.8rem 1.5em;
-        .hamper-texts {
-            display: flex;
-            flex-direction: column;
-            gap: .6em;
-            overflow: hidden;
-            .hamper-title {
-                width: 100%;
-                font-weight: 500;
-                font-size: 1.2em;
-                line-height: 120%;
-                text-align: left;
-                padding: .2em 2rem 0 0;
-                box-sizing: border-box;
-                position: relative;
-                font-family: 'fredoka';
-                &::after {
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    bottom: -8px;
-                    width: 100%;
-                    height: 1.5px;
-                    background-color: #a9a9a9;
-                }
-            }
-            .hamper-price {
-                position: relative;
-                padding: .2em;
-                font-weight: 600;
-                color: #9995bd;
-                font-size: larger;
-            }
-            .hamper-price-was {
-                color: rgba(128, 128, 128, 0.808);
-                margin-left: 10px;
-                text-decoration: line-through;
-                text-decoration-color: #7e7e7e9d;
-                text-decoration-thickness: 2px;
-            }
-        }
-    }
+	border: 2px solid $primary-005;
+	border-radius: 2rem;
+	// max-width: 300px;
+	overflow: hidden;
+	&-img {
+		width: 100%;
+		height: 100%;
+		max-height: 300px;
+		overflow: hidden;
+		// z-index: 0;
+		.hamper-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.hamper-contents {
+		padding: 1.5rem;
+		padding-bottom: 1rem;
+		.hamper-texts {
+			.hamper-title {
+				width: 100%;
+				font-weight: 500;
+				font-size: 1.25rem;
+				font-family: 'fredoka';
+			}
+			.hamper-prices {
+				display: flex;
+				gap: 8px;
+				.hamper-price {
+					font-size: 18px;
+					font-weight: 600;
+					color: #9995bd;
+					&.price-old {
+						text-decoration: line-through;
+						color: #888888;
+					}
+				}
+			}
+			// .hamper-price {
+			// 	position: relative;
+			// 	padding: .2em;
+			// 	font-weight: 600;
+			// 	color: #9995bd;
+			// 	font-size: larger;
+			// }
+			// .hamper-price-was {
+			// 	color: rgba(128, 128, 128, 0.808);
+			// 	margin-left: 10px;
+			// 	text-decoration: line-through;
+			// 	text-decoration-color: #7e7e7e9d;
+			// 	text-decoration-thickness: 2px;
+			// }
+		}
+	}
+}
+
+.separator {
+	height: 2px;
+	width: 100%;
+	margin: 8px 0;
+	background-color: #888888;
 }
