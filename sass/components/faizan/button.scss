@@ -1,0 +1,72 @@
+// button.scss — Reusable button styles adhering to Cloud2Voice standards
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 16px 28px;
+	border-radius: $radius-btn;
+	font-family: $font-family-lato;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	cursor: pointer;
+	white-space: nowrap;
+	outline: none;
+	transition: all 0.2s ease;
+
+	&-text {
+		white-space: nowrap;
+	}
+
+	&-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		line-height: 1;
+		flex-shrink: 0;
+	}
+
+	// Primary — filled
+	&-primary {
+		width: 209px;
+		height: 52px;
+		background-color: $color-btn-primary-bg;
+		color: $color-btn-primary-text;
+		border: none;
+
+		&:hover {
+			background-color: $color-btn-primary-bg-hover;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(9, 52, 35, 0.25);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+
+	// Secondary — outline
+	&-secondary {
+		width: 174px;
+		height: 51px;
+		background-color: transparent;
+		border: 1px solid $color-btn-secondary-border;
+		color: $color-btn-secondary-text;
+		box-sizing: border-box;
+
+		&:hover {
+			background-color: $color-btn-secondary-bg-hover;
+			transform: translateY(-1px);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+}
