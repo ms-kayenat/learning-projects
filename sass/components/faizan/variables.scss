@@ -1,0 +1,27 @@
+// variables.scss — Cloud2Voice Standards
+// Exact values pulled from Figma Dev Mode
+
+// Colors — Card
+$color-card-bg: #E0FDA5;
+$color-card-radius: 16px;
+
+// Colors — Text & Borders (primary-001)
+$color-primary-001: #01150D;
+$color-text-dark: #01150D;
+
+// Colors — Buttons (primary-002, primary-005)
+$color-btn-primary-bg: #093423;
+$color-btn-primary-bg-hover: #0f4f36;
+$color-btn-primary-text: #E0FFED;
+
+$color-btn-secondary-border: #01150D;
+$color-btn-secondary-text: #01150D;
+$color-btn-secondary-bg-hover: rgba(1, 21, 13, 0.06);
+
+// Spacing & Sizes
+$radius-btn: 6px;
+$spacing-card-padding-y: 32px;
+$spacing-card-padding-x: 24px;
+
+// Typography
+$font-family-lato: "Lato", sans-serif;
